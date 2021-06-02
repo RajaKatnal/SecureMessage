@@ -20,6 +20,12 @@ Secure Message is an android application that uses SMS as mode of communication 
 
 * ``SMSBroadcastReceiver.java`` is the main activity class to send message. It uses ``android.provider.Telephony.SMS_RECEIVED`` and class ``BroadcastReceiver`` to send the message as SMS.
 
+### Working method
+
+The sender first enters the recepient's mobile number (in the given screenshots below I've run it on the Android Studio emulator, hence I've used the emulator port number instead of an actual mobile number), followed by a 16 character secret key which is used to encrypt the plain text. The sender then types in the desired message to be sent (In my example i sent "Test Message") in the next field, and then hits the send button. On the Receiver's end the encrpyted message shows up along with the secret key input, which the receiver has to type in and then the cipher text is decrypted.
+
+You will receive the cipher text in your default messaging app as well, but only this app will decrypt the message for you.
+
 ### Screenshots 
 Sender:
 ![sender](https://user-images.githubusercontent.com/45178771/120397626-40ff2980-c356-11eb-964b-dbeb6c9c865d.png)
